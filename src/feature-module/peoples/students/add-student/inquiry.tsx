@@ -177,12 +177,12 @@ const Inquiry = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="col-xxl col-xl-3 col-md-6">
+                      {/* <div className="col-xxl col-xl-3 col-md-6">
                         <div className="mb-3">
                           <label className="form-label">Roll Number</label>
                           <input type="text" className="form-control" defaultValue={isEdit? '35013': undefined} />
                         </div>
-                      </div>
+                      </div> */}
                       {/* <div className="col-xxl col-xl-3 col-md-6">
                         <div className="mb-3">
                           <label className="form-label">Status</label>
@@ -221,7 +221,7 @@ const Inquiry = () => {
                           />
                         </div>
                       </div>
-                      <div className="col-xxl col-xl-3 col-md-6">
+                      {/* <div className="col-xxl col-xl-3 col-md-6">
                         <div className="mb-3">
                           <label className="form-label">Section</label>
                           <CommonSelect
@@ -230,7 +230,7 @@ const Inquiry = () => {
                             defaultValue={isEdit?allSection[0]:undefined}
                           />
                         </div>
-                      </div>
+                      </div> */}
                       <div className="col-xxl col-xl-3 col-md-6">
                         <div className="mb-3">
                           <label className="form-label">Gender</label>
@@ -746,7 +746,7 @@ const Inquiry = () => {
                         <div className="col-md-6">
                         <div className="mb-3">
                           <label className="form-label">
-                            No-Colony
+                           House No. & Colony Name
                           </label>
                           <input type="text" className="form-control" defaultValue={isEdit? '3495 Red Hawk Road, Buffalo Lake, MN 55314': undefined}/>
                         </div>
