@@ -113,7 +113,10 @@ const Login = () => {
                             Please enter your details to sign in
                           </p>
                         </div>
-                        <div className="mt-4">
+
+                        {/* facbook,google,apple login */}
+                        
+                        {/* <div className="mt-4">
                           <div className="d-flex align-items-center justify-content-center flex-wrap">
                             <div className="text-center me-2 flex-fill">
                               <Link
@@ -152,10 +155,10 @@ const Login = () => {
                               </Link>
                             </div>
                           </div>
-                        </div>
-                        <div className="login-or">
+                        </div> */}
+                        {/* <div className="login-or">
                           <span className="span-or">Or</span>
-                        </div>
+                        </div> */}
                         <div className="mb-3 ">
                           <label className="form-label">Email Address</label>
                           <div className="input-icon mb-3 position-relative">
@@ -220,7 +223,7 @@ const Login = () => {
                       </div>
                     </div>
                     <div className="mt-5 text-center">
-                      <p className="mb-0 ">Copyright © {date()} - Preskool</p>
+                      <p className="mb-0 ">Copyright © {date()} - COYO KID</p>
                     </div>
                   </div>
                 </form>

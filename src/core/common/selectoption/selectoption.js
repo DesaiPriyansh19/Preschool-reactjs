@@ -425,6 +425,12 @@ export const allSection = [
   { value: "A", label: "A" },
   { value: "B", label: "B" },
 ];
+export const suitableBatch = [
+  { value: "morning", label: "morning" },
+  { value: "nuoon", label: "noon" },
+    { value: "both", label: "both" },
+
+];
 export const amount = [
   { value: "2000", label: "2000" },
   { value: "500", label: "500" },

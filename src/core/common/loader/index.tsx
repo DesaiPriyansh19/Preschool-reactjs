@@ -42,9 +42,18 @@ const Loader = () => {
 
 const Preloader = () => {
   return (
-    <div id="global-loader">
-		<div className="page-loader"></div>
-	</div>
+ <div className="d-flex justify-content-center align-items-center vh-100 bg-white">
+      <div className="loader-container position-relative">
+        {/* Orbiting dots */}
+        <div className="dot dot1 bg-green"></div>
+        <div className="dot dot2 bg-blue"></div>
+        <div className="dot dot3 bg-yellow"></div>
+        <div className="dot dot4 bg-pink"></div>
+
+        {/* Central logo */}
+        <img src='assets/img/main-logo.png' alt="logo" className="loader-logo" />
+      </div>
+    </div>
   );
 };
 

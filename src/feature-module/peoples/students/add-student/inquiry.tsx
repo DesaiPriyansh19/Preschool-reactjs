@@ -9,6 +9,7 @@ import {
   Hostel,
   PickupPoint,
   VehicleNumber,
+  suitableBatch,
   academicYear,
   allClass,
   allSection,
@@ -107,7 +108,7 @@ const Inquiry = () => {
                   <div className="card-body pb-1">
                     <div className="row">
                       <div className="col-md-12">
-                        <div className="d-flex align-items-center flex-wrap row-gap-3 mb-3">
+                        {/* <div className="d-flex align-items-center flex-wrap row-gap-3 mb-3">
                           <div className="d-flex align-items-center justify-content-center avatar avatar-xxl border border-dashed me-2 flex-shrink-0 text-dark frames">
                             <i className="ti ti-photo-plus fs-16" />
                           </div>
@@ -129,7 +130,7 @@ const Inquiry = () => {
                               Upload image size 4MB, Format JPG, PNG, SVG
                             </p>
                           </div>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                     <div className="row row-cols-xxl-5 row-cols-md-6">
@@ -143,15 +144,15 @@ const Inquiry = () => {
                         />
                         </div>
                       </div>
-                      <div className="col-xxl col-xl-3 col-md-6">
+                      {/* <div className="col-xxl col-xl-3 col-md-6">
                         <div className="mb-3">
                           <label className="form-label">Admission Number</label>
                           <input type="text" className="form-control" defaultValue={isEdit? 'AD9892434': undefined} />
                         </div>
-                      </div>
+                      </div> */}
                       <div className="col-xxl col-xl-3 col-md-6">
                         <div className="mb-3">
-                          <label className="form-label">Admission Date</label>
+                          <label className="form-label">Date Of Enquiry</label>
                           <div className="input-icon position-relative">
                           {isEdit? <DatePicker
                                 className="form-control datetimepicker"
@@ -182,7 +183,7 @@ const Inquiry = () => {
                           <input type="text" className="form-control" defaultValue={isEdit? '35013': undefined} />
                         </div>
                       </div>
-                      <div className="col-xxl col-xl-3 col-md-6">
+                      {/* <div className="col-xxl col-xl-3 col-md-6">
                         <div className="mb-3">
                           <label className="form-label">Status</label>
                           <CommonSelect
@@ -191,11 +192,17 @@ const Inquiry = () => {
                             defaultValue={isEdit?status[0]:undefined}
                           />
                         </div>
-                      </div>
+                      </div> */}
                       <div className="col-xxl col-xl-3 col-md-6">
                         <div className="mb-3">
                           <label className="form-label">First Name</label>
                           <input type="text" className="form-control" defaultValue={isEdit? 'Ralph': undefined}/>
+                        </div>
+                      </div>
+                         <div className="col-xxl col-xl-3 col-md-6">
+                        <div className="mb-3">
+                          <label className="form-label">Middle Name</label>
+                          <input type="text" className="form-control" defaultValue={isEdit? 'claudia': undefined}/>
                         </div>
                       </div>
                       <div className="col-xxl col-xl-3 col-md-6">
@@ -261,7 +268,7 @@ const Inquiry = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="col-xxl col-xl-3 col-md-6">
+                      {/* <div className="col-xxl col-xl-3 col-md-6">
                         <div className="mb-3">
                           <label className="form-label">Blood Group</label>
                           <CommonSelect
@@ -280,8 +287,8 @@ const Inquiry = () => {
                             defaultValue={isEdit?house[0]:undefined}
                           />
                         </div>
-                      </div>
-                      <div className="col-xxl col-xl-3 col-md-6">
+                      </div> */}
+                      {/* <div className="col-xxl col-xl-3 col-md-6">
                         <div className="mb-3">
                           <label className="form-label">Religion</label>
                           <CommonSelect
@@ -290,8 +297,8 @@ const Inquiry = () => {
                             defaultValue={isEdit?religion[0]:undefined}
                           />
                         </div>
-                      </div>
-                      <div className="col-xxl col-xl-3 col-md-6">
+                      </div> */}
+                      {/* <div className="col-xxl col-xl-3 col-md-6">
                         <div className="mb-3">
                           <label className="form-label">Category</label>
                           <CommonSelect
@@ -300,7 +307,7 @@ const Inquiry = () => {
                             defaultValue={isEdit?cast[0]:undefined}
                           />
                         </div>
-                      </div>
+                      </div> */}
                       <div className="col-xxl col-xl-3 col-md-6">
                         <div className="mb-3">
                           <label className="form-label">
@@ -315,13 +322,23 @@ const Inquiry = () => {
                           <input type="email" className="form-control" defaultValue={isEdit? 'jan@example.com': undefined}/>
                         </div>
                       </div>
-                      <div className="col-xxl col-xl-3 col-md-6">
+                           <div className="col-xxl col-xl-3 col-md-6">
+                        <div className="mb-3">
+                          <label className="form-label">Suitable Batch</label>
+                          <CommonSelect
+                            className="select"
+                            options={suitableBatch}
+                            defaultValue={isEdit?suitableBatch[0]:undefined}
+                          />
+                        </div>
+                      </div>
+                      {/* <div className="col-xxl col-xl-3 col-md-6">
                         <div className="mb-3">
                           <label className="form-label">Caste</label>
                           <input type="text" className="form-control" defaultValue={isEdit? 'Catholic': undefined}/>
                         </div>
-                      </div>
-                      <div className="col-xxl col-xl-3 col-md-6">
+                      </div> */}
+                      {/* <div className="col-xxl col-xl-3 col-md-6">
                         <div className="mb-3">
                           <label className="form-label">Mother Tongue</label>
                           <CommonSelect
@@ -340,7 +357,7 @@ const Inquiry = () => {
                             onChange={setOwner}
                           />
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>
@@ -362,7 +379,7 @@ const Inquiry = () => {
                       <h5 className="mb-3">Father’s Info</h5>
                       <div className="row">
                         <div className="col-md-12">
-                          <div className="d-flex align-items-center flex-wrap row-gap-3 mb-3">
+                          {/* <div className="d-flex align-items-center flex-wrap row-gap-3 mb-3">
                             <div className="d-flex align-items-center justify-content-center avatar avatar-xxl border border-dashed me-2 flex-shrink-0 text-dark frames">
                               <i className="ti ti-photo-plus fs-16" />
                             </div>
@@ -384,7 +401,7 @@ const Inquiry = () => {
                                 Upload image size 4MB, Format JPG, PNG, SVG
                               </p>
                             </div>
-                          </div>
+                          </div> */}
                         </div>
                         <div className="col-lg-3 col-md-6">
                           <div className="mb-3">
@@ -392,12 +409,12 @@ const Inquiry = () => {
                             <input type="text" className="form-control" defaultValue={isEdit? 'Jerald Vicinius': undefined}/>
                           </div>
                         </div>
-                        <div className="col-lg-3 col-md-6">
+                        {/* <div className="col-lg-3 col-md-6">
                           <div className="mb-3">
                             <label className="form-label">Email</label>
                             <input type="text" className="form-control" defaultValue={isEdit? 'jera@example.com': undefined}/>
                           </div>
-                        </div>
+                        </div> */}
                         <div className="col-lg-3 col-md-6">
                           <div className="mb-3">
                             <label className="form-label">Phone Number</label>
@@ -417,7 +434,7 @@ const Inquiry = () => {
                     <div className="border-bottom mb-3">
                       <h5 className="mb-3">Mother’s Info</h5>
                       <div className="row">
-                        <div className="col-md-12">
+                        {/* <div className="col-md-12">
                           <div className="d-flex align-items-center flex-wrap row-gap-3 mb-3">
                             <div className="d-flex align-items-center justify-content-center avatar avatar-xxl border border-dashed me-2 flex-shrink-0 text-dark frames">
                               <i className="ti ti-photo-plus fs-16" />
@@ -441,19 +458,19 @@ const Inquiry = () => {
                               </p>
                             </div>
                           </div>
-                        </div>
+                        </div> */}
                         <div className="col-lg-3 col-md-6">
                           <div className="mb-3">
                             <label className="form-label">Mother Name</label>
                             <input type="text" className="form-control" defaultValue={isEdit? 'Roberta Webber': undefined}/>
                           </div>
                         </div>
-                        <div className="col-lg-3 col-md-6">
+                        {/* <div className="col-lg-3 col-md-6">
                           <div className="mb-3">
                             <label className="form-label">Email</label>
                             <input type="text" className="form-control" defaultValue={isEdit? 'robe@example.com': undefined}/>
                           </div>
-                        </div>
+                        </div> */}
                         <div className="col-lg-3 col-md-6">
                           <div className="mb-3">
                             <label className="form-label">Phone Number</label>
@@ -470,7 +487,7 @@ const Inquiry = () => {
                         </div>
                       </div>
                     </div>
-                    <div>
+                    {/* <div>
                       <h5 className="mb-3">Guardian Details</h5>
                       <div className="row">
                         <div className="col-md-12">
@@ -587,7 +604,7 @@ const Inquiry = () => {
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 {/* /Parents & Guardian Information */}
@@ -660,7 +677,7 @@ const Inquiry = () => {
                     />
                   </div>
                 </div>
-                <div className="col-lg-3 col-md-6">
+                {/* <div className="col-lg-3 col-md-6">
                   <div className="mb-3">
                     <label className="form-label">Admission No</label>
                     <CommonSelect
@@ -669,7 +686,7 @@ const Inquiry = () => {
                       defaultValue={isEdit?AdmissionNo[0]:undefined}
                     />
                   </div>
-                </div>
+                </div> */}
                 <div className="col-lg-3 col-md-6">
                   <div className="mb-3">
                     <div className="d-flex align-items-center">
@@ -721,21 +738,117 @@ const Inquiry = () => {
                       <span className="bg-white avatar avatar-sm me-2 text-gray-7 flex-shrink-0">
                         <i className="ti ti-map fs-16" />
                       </span>
-                      <h4 className="text-dark">Address</h4>
+                      <h4 className="text-dark">Permanent Address</h4>
                     </div>
                   </div>
                   <div className="card-body pb-1">
                     <div className="row">
-                      <div className="col-md-6">
+                        <div className="col-md-6">
                         <div className="mb-3">
-                          <label className="form-label">Current Address</label>
+                          <label className="form-label">
+                            No-Colony
+                          </label>
                           <input type="text" className="form-control" defaultValue={isEdit? '3495 Red Hawk Road, Buffalo Lake, MN 55314': undefined}/>
                         </div>
-                      </div>
+                      </div>  
                       <div className="col-md-6">
                         <div className="mb-3">
                           <label className="form-label">
-                            Permanent Address
+                      Area
+                          </label>
+                          <input type="text" className="form-control" defaultValue={isEdit? '3495 Red Hawk Road, Buffalo Lake, MN 55314': undefined}/>
+                        </div>
+                      </div>
+                         <div className="col-md-6">
+                        <div className="mb-3">
+                          <label className="form-label">
+                          Landmark
+                          </label>
+                          <input type="text" className="form-control" defaultValue={isEdit? '3495 Red Hawk Road, Buffalo Lake, MN 55314': undefined}/>
+                        </div>
+                      </div>
+                           <div className="col-md-6">
+                        <div className="mb-3">
+                          <label className="form-label">
+                         City
+                          </label>
+                          <input type="text" className="form-control" defaultValue={isEdit? '3495 Red Hawk Road, Buffalo Lake, MN 55314': undefined}/>
+                        </div>
+                      </div>
+                           <div className="col-md-6">
+                        <div className="mb-3">
+                          <label className="form-label">
+                      State
+                          </label>
+                          <input type="text" className="form-control" defaultValue={isEdit? '3495 Red Hawk Road, Buffalo Lake, MN 55314': undefined}/>
+                        </div>
+                      </div>
+                         <div className="col-md-6">
+                        <div className="mb-3">
+                          <label className="form-label">
+                          Pincode
+                          </label>
+                          <input type="text" className="form-control" defaultValue={isEdit? '3495 Red Hawk Road, Buffalo Lake, MN 55314': undefined}/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                  <div className="card">
+                  <div className="card-header bg-light">
+                    <div className="d-flex align-items-center">
+                      <span className="bg-white avatar avatar-sm me-2 text-gray-7 flex-shrink-0">
+                        <i className="ti ti-map fs-16" />
+                      </span>
+                      <h4 className="text-dark">Current Address</h4>
+                    </div>
+                  </div>
+                  <div className="card-body pb-1">
+                    <div className="row">
+                        <div className="col-md-6">
+                        <div className="mb-3">
+                          <label className="form-label">
+                            No-Colony
+                          </label>
+                          <input type="text" className="form-control" defaultValue={isEdit? '3495 Red Hawk Road, Buffalo Lake, MN 55314': undefined}/>
+                        </div>
+                      </div>  
+                      <div className="col-md-6">
+                        <div className="mb-3">
+                          <label className="form-label">
+                      Area
+                          </label>
+                          <input type="text" className="form-control" defaultValue={isEdit? '3495 Red Hawk Road, Buffalo Lake, MN 55314': undefined}/>
+                        </div>
+                      </div>
+                         <div className="col-md-6">
+                        <div className="mb-3">
+                          <label className="form-label">
+                          Landmark
+                          </label>
+                          <input type="text" className="form-control" defaultValue={isEdit? '3495 Red Hawk Road, Buffalo Lake, MN 55314': undefined}/>
+                        </div>
+                      </div>
+                           <div className="col-md-6">
+                        <div className="mb-3">
+                          <label className="form-label">
+                         City
+                          </label>
+                          <input type="text" className="form-control" defaultValue={isEdit? '3495 Red Hawk Road, Buffalo Lake, MN 55314': undefined}/>
+                        </div>
+                      </div>
+                           <div className="col-md-6">
+                        <div className="mb-3">
+                          <label className="form-label">
+                      State
+                          </label>
+                          <input type="text" className="form-control" defaultValue={isEdit? '3495 Red Hawk Road, Buffalo Lake, MN 55314': undefined}/>
+                        </div>
+                      </div>
+                         <div className="col-md-6">
+                        <div className="mb-3">
+                          <label className="form-label">
+                          Pincode
                           </label>
                           <input type="text" className="form-control" defaultValue={isEdit? '3495 Red Hawk Road, Buffalo Lake, MN 55314': undefined}/>
                         </div>
@@ -745,7 +858,7 @@ const Inquiry = () => {
                 </div>
                 {/* /Address */}
                 {/* Transport Information */}
-                <div className="card">
+                {/* <div className="card">
                   <div className="card-header bg-light d-flex align-items-center justify-content-between">
                     <div className="d-flex align-items-center">
                       <span className="bg-white avatar avatar-sm me-2 text-gray-7 flex-shrink-0">
@@ -795,10 +908,10 @@ const Inquiry = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
                 {/* /Transport Information */}
                 {/* Hostel Information */}
-                <div className="card">
+                {/* <div className="card">
                   <div className="card-header bg-light d-flex align-items-center justify-content-between">
                     <div className="d-flex align-items-center">
                       <span className="bg-white avatar avatar-sm me-2 text-gray-7 flex-shrink-0">
@@ -838,10 +951,10 @@ const Inquiry = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
                 {/* /Hostel Information */}
                 {/* Documents */}
-                <div className="card">
+                {/* <div className="card">
                   <div className="card-header bg-light">
                     <div className="d-flex align-items-center">
                       <span className="bg-white avatar avatar-sm me-2 text-gray-7 flex-shrink-0">
@@ -898,10 +1011,10 @@ const Inquiry = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
                 {/* /Documents */}
                 {/* Medical History */}
-                <div className="card">
+                {/* <div className="card">
                   <div className="card-header bg-light">
                     <div className="d-flex align-items-center">
                       <span className="bg-white avatar avatar-sm me-2 text-gray-7 flex-shrink-0">
@@ -983,7 +1096,7 @@ const Inquiry = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
                 {/* /Medical History */}
                 {/* Previous School details */}
                 <div className="card">
@@ -1014,7 +1127,7 @@ const Inquiry = () => {
                 </div>
                 {/* /Previous School details */}
                 {/* Other Details */}
-                <div className="card">
+                {/* <div className="card">
                   <div className="card-header bg-light">
                     <div className="d-flex align-items-center">
                       <span className="bg-white avatar avatar-sm me-2 text-gray-7 flex-shrink-0">
@@ -1057,16 +1170,16 @@ const Inquiry = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
                 {/* /Other Details */}
-                <div className="text-end">
+                {/* <div className="text-end">
                   <button type="button" className="btn btn-light me-3">
                     Cancel
                   </button>
                   <Link to={routes.studentList} className="btn btn-primary">
                     Add Student
                   </Link>
-                </div>
+                </div> */}
               </form>
             </div>
           </div>
