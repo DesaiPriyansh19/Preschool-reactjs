@@ -714,27 +714,7 @@ const AddStudent = () => {
                     />
                   </div>
                 </div>
-                <div className="col-lg-3 col-md-6">
-                  <div className="mb-3">
-                    <label className="form-label">Roll No</label>
-                    <CommonSelect
-                      className="select"
-                      options={rollno}
-                      defaultValue={isEdit?rollno[0]:undefined}
-                    />
-                  </div>
-                </div>
-                <div className="col-lg-3 col-md-6">
-                  <div className="mb-3">
-                    <label className="form-label">Admission No</label>
-                    <CommonSelect
-                      className="select"
-                      options={AdmissionNo}
-                      defaultValue={isEdit?AdmissionNo[0]:undefined}
-                    />
-                  </div>
-                </div>
-                <div className="col-lg-3 col-md-6">
+                  <div className="col-lg-3 col-md-6">
                   <div className="mb-3">
                     <div className="d-flex align-items-center">
                       <div className="w-100">
@@ -760,6 +740,54 @@ const AddStudent = () => {
                     </div>
                   </div>
                 </div>
+                  <div className="col-lg-3 col-md-6">
+                  <div className="mb-3">
+                    <div className="d-flex align-items-center">
+                      <div className="w-100">
+                        <label className="form-label">Section</label>
+                        <CommonSelect
+                          className="select"
+                          options={allClass}
+                          defaultValue={isEdit?allClass[0]:undefined}
+                        />
+                      </div>
+                      {newContents.length > 1 && (
+                        <div>
+                          <label className="form-label">&nbsp;</label>
+                          <Link
+                            to="#"
+                            className="trash-icon ms-3"
+                            onClick={() => removeContent(index)}
+                          >
+                            <i className="ti ti-trash-x" />
+                          </Link>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-3 col-md-6">
+                  <div className="mb-3">
+                    <label className="form-label">Roll No</label>
+                    <CommonSelect
+                      className="select"
+                      options={rollno}
+                      defaultValue={isEdit?rollno[0]:undefined}
+                    />
+                  </div>
+                </div>
+               
+                <div className="col-lg-3 col-md-6">
+                  <div className="mb-3">
+                    <label className="form-label">Admission No</label>
+                    <CommonSelect
+                      className="select"
+                      options={AdmissionNo}
+                      defaultValue={isEdit?AdmissionNo[0]:undefined}
+                    />
+                  </div>
+                </div>
+               
               </div>
             </div>
           ))}
@@ -777,29 +805,63 @@ const AddStudent = () => {
       </div>
     </div>
                 </div>
-                {/* /Sibilings */}
+             
                 {/* Address */}
-                <div className="card">
+                  <div className="card">
                   <div className="card-header bg-light">
                     <div className="d-flex align-items-center">
                       <span className="bg-white avatar avatar-sm me-2 text-gray-7 flex-shrink-0">
                         <i className="ti ti-map fs-16" />
                       </span>
-                      <h4 className="text-dark">Address</h4>
+                      <h4 className="text-dark">Permanent Address</h4>
                     </div>
                   </div>
                   <div className="card-body pb-1">
                     <div className="row">
-                      <div className="col-md-6">
+                        <div className="col-md-6">
                         <div className="mb-3">
-                          <label className="form-label">Current Address</label>
+                          <label className="form-label">
+                           House No. & Colony Name
+                          </label>
                           <input type="text" className="form-control" defaultValue={isEdit? '3495 Red Hawk Road, Buffalo Lake, MN 55314': undefined}/>
                         </div>
-                      </div>
+                      </div>  
                       <div className="col-md-6">
                         <div className="mb-3">
                           <label className="form-label">
-                            Permanent Address
+                      Area
+                          </label>
+                          <input type="text" className="form-control" defaultValue={isEdit? '3495 Red Hawk Road, Buffalo Lake, MN 55314': undefined}/>
+                        </div>
+                      </div>
+                         <div className="col-md-6">
+                        <div className="mb-3">
+                          <label className="form-label">
+                          Landmark
+                          </label>
+                          <input type="text" className="form-control" defaultValue={isEdit? '3495 Red Hawk Road, Buffalo Lake, MN 55314': undefined}/>
+                        </div>
+                      </div>
+                           <div className="col-md-6">
+                        <div className="mb-3">
+                          <label className="form-label">
+                         City
+                          </label>
+                          <input type="text" className="form-control" defaultValue={isEdit? '3495 Red Hawk Road, Buffalo Lake, MN 55314': undefined}/>
+                        </div>
+                      </div>
+                           <div className="col-md-6">
+                        <div className="mb-3">
+                          <label className="form-label">
+                      State
+                          </label>
+                          <input type="text" className="form-control" defaultValue={isEdit? '3495 Red Hawk Road, Buffalo Lake, MN 55314': undefined}/>
+                        </div>
+                      </div>
+                         <div className="col-md-6">
+                        <div className="mb-3">
+                          <label className="form-label">
+                          Pincode
                           </label>
                           <input type="text" className="form-control" defaultValue={isEdit? '3495 Red Hawk Road, Buffalo Lake, MN 55314': undefined}/>
                         </div>
@@ -807,7 +869,69 @@ const AddStudent = () => {
                     </div>
                   </div>
                 </div>
-                {/* /Address */}
+                   <div className="card">
+                  <div className="card-header bg-light">
+                    <div className="d-flex align-items-center">
+                      <span className="bg-white avatar avatar-sm me-2 text-gray-7 flex-shrink-0">
+                        <i className="ti ti-map fs-16" />
+                      </span>
+                      <h4 className="text-dark">Current Address</h4>
+                    </div>
+                  </div>
+                  <div className="card-body pb-1">
+                    <div className="row">
+                        <div className="col-md-6">
+                        <div className="mb-3">
+                          <label className="form-label">
+                            No-Colony
+                          </label>
+                          <input type="text" className="form-control" defaultValue={isEdit? '3495 Red Hawk Road, Buffalo Lake, MN 55314': undefined}/>
+                        </div>
+                      </div>  
+                      <div className="col-md-6">
+                        <div className="mb-3">
+                          <label className="form-label">
+                      Area
+                          </label>
+                          <input type="text" className="form-control" defaultValue={isEdit? '3495 Red Hawk Road, Buffalo Lake, MN 55314': undefined}/>
+                        </div>
+                      </div>
+                         <div className="col-md-6">
+                        <div className="mb-3">
+                          <label className="form-label">
+                          Landmark
+                          </label>
+                          <input type="text" className="form-control" defaultValue={isEdit? '3495 Red Hawk Road, Buffalo Lake, MN 55314': undefined}/>
+                        </div>
+                      </div>
+                           <div className="col-md-6">
+                        <div className="mb-3">
+                          <label className="form-label">
+                         City
+                          </label>
+                          <input type="text" className="form-control" defaultValue={isEdit? '3495 Red Hawk Road, Buffalo Lake, MN 55314': undefined}/>
+                        </div>
+                      </div>
+                           <div className="col-md-6">
+                        <div className="mb-3">
+                          <label className="form-label">
+                      State
+                          </label>
+                          <input type="text" className="form-control" defaultValue={isEdit? '3495 Red Hawk Road, Buffalo Lake, MN 55314': undefined}/>
+                        </div>
+                      </div>
+                         <div className="col-md-6">
+                        <div className="mb-3">
+                          <label className="form-label">
+                          Pincode
+                          </label>
+                          <input type="text" className="form-control" defaultValue={isEdit? '3495 Red Hawk Road, Buffalo Lake, MN 55314': undefined}/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+           
                 {/* Transport Information */}
                 <div className="card">
                   <div className="card-header bg-light d-flex align-items-center justify-content-between">
@@ -817,15 +941,16 @@ const AddStudent = () => {
                       </span>
                       <h4 className="text-dark">Transport Information</h4>
                     </div>
-                    <div className="form-check form-switch">
+                    
+                    {/* <div className="form-check form-switch">
                       <input
                         className="form-check-input"
                         type="checkbox"
                         role="switch"
                       />
-                    </div>
+                    </div> */}
                   </div>
-                  <div className="card-body pb-1">
+                  {/* <div className="card-body pb-1">
                     <div className="row">
                       <div className="col-lg-4 col-md-6">
                         <div className="mb-3">
@@ -858,11 +983,42 @@ const AddStudent = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
+                  <div className="mb-3 pl-3">
+                              <label className="form-label">Avail Transport Service</label>
+   
+  <div>
+    <div className="form-check form-check-inline">
+      <input
+        className="form-check-input"
+        type="radio"
+        name="ownHouse"
+        id="ownHouseYes"
+        value="yes"
+      />
+      <label className="form-check-label" htmlFor="ownHouseYes">
+        Yes
+      </label>
+    </div>
+    <div className="form-check form-check-inline">
+      <input
+        className="form-check-input"
+        type="radio"
+        name="ownHouse"
+        id="ownHouseNo"
+        value="no"
+      />
+      <label className="form-check-label" htmlFor="ownHouseNo">
+        No
+      </label>
+    </div>
+  </div>
+</div>
+
                 </div>
                 {/* /Transport Information */}
                 {/* Hostel Information */}
-                <div className="card">
+                {/* <div className="card">
                   <div className="card-header bg-light d-flex align-items-center justify-content-between">
                     <div className="d-flex align-items-center">
                       <span className="bg-white avatar avatar-sm me-2 text-gray-7 flex-shrink-0">
@@ -902,8 +1058,8 @@ const AddStudent = () => {
                       </div>
                     </div>
                   </div>
-                </div>
-                {/* /Hostel Information */}
+                </div> */}
+                {/* /Medical Information */}
                 {/* Documents */}
                 <div className="card">
                   <div className="card-header bg-light">
@@ -920,14 +1076,37 @@ const AddStudent = () => {
                         <div className="mb-2">
                           <div className="mb-3">
                             <label className="form-label mb-1">
-                              Medical Condition
+                              Birth Certificate
                             </label>
                             <p>Upload image size of 4MB, Accepted Format PDF</p>
                           </div>
                           <div className="d-flex align-items-center flex-wrap">
                             <div className="btn btn-primary drag-upload-btn mb-2 me-2">
                               <i className="ti ti-file-upload me-1" />
-                              Change
+                           Upload Document
+                              <input
+                                type="file"
+                                className="form-control image_sign"
+                                multiple
+                              />
+                            </div>
+                            {isEdit? <p className="mb-2">BirthCertificate.pdf</p> : <></>}
+                            
+                          </div>
+                        </div>
+                      </div>
+                        <div className="col-lg-6">
+                        <div className="mb-2">
+                          <div className="mb-3">
+                            <label className="form-label mb-1">
+                             Adhar Card
+                            </label>
+                            <p>Upload image size of 4MB, Accepted Format PDF</p>
+                          </div>
+                          <div className="d-flex align-items-center flex-wrap">
+                            <div className="btn btn-primary drag-upload-btn mb-2 me-2">
+                              <i className="ti ti-file-upload me-1" />
+                           Upload Document
                               <input
                                 type="file"
                                 className="form-control image_sign"
@@ -977,13 +1156,14 @@ const AddStudent = () => {
                   <div className="card-body pb-1">
                     <div className="row">
                       <div className="col-md-12">
-                        <div className="mb-2">
-                          <label className="form-label">
-                            Medical Condition
+                   
+                         <div className="mb-2">
+                     <label className="form-label">
+                            Medical History
                           </label>
                           <div className="d-flex align-items-center flex-wrap">
                             <label className="form-label text-dark fw-normal me-2">
-                              Medical Condition of a Student
+            Any serious disease in past?
                             </label>
                             <div className="form-check me-3 mb-2">
                               <input
@@ -997,7 +1177,7 @@ const AddStudent = () => {
                                 className="form-check-label"
                                 htmlFor="good"
                               >
-                                Good
+                               Yes
                               </label>
                             </div>
                             <div className="form-check me-3 mb-2">
@@ -1008,25 +1188,23 @@ const AddStudent = () => {
                                 id="bad"
                               />
                               <label className="form-check-label" htmlFor="bad">
-                                Bad
+                            NO
                               </label>
                             </div>
-                            <div className="form-check mb-2">
-                              <input
-                                className="form-check-input"
-                                type="radio"
-                                name="condition"
-                                id="others"
-                              />
-                              <label
-                                className="form-check-label"
-                                htmlFor="others"
-                              >
-                                Others
-                              </label>
-                            </div>
+                        
                           </div>
+                     
                         </div>
+                      </div>
+                            <div className="mb-3">
+                        <label className="form-label">Any Serious Injury In Past?</label>
+
+                        
+                        <TagsInput
+                            // className="input-tags form-control"
+                            value={owner2}
+                            onChange={setOwner2}
+                          />
                       </div>
                       <div className="mb-3">
                         <label className="form-label">Allergies</label>
@@ -1078,7 +1256,7 @@ const AddStudent = () => {
                 </div>
                 {/* /Previous School details */}
                 {/* Other Details */}
-                <div className="card">
+                {/* <div className="card">
                   <div className="card-header bg-light">
                     <div className="d-flex align-items-center">
                       <span className="bg-white avatar avatar-sm me-2 text-gray-7 flex-shrink-0">
@@ -1121,8 +1299,21 @@ const AddStudent = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
                 {/* /Other Details */}
+           <div className="form-check mt-3">
+  <input
+    className="form-check-input"
+    type="checkbox"
+    id="agreeTerms"
+  />
+  <label className="form-check-label" htmlFor="agreeTerms">
+    <p style={{ color: "#333", marginBottom: 0 }}>
+      We Agree With Terms And Conditions Of Organisation.
+    </p>
+  </label>
+</div>
+
                 <div className="text-end">
                   <button type="button" className="btn btn-light me-3">
                     Cancel
