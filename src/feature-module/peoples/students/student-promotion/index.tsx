@@ -9,6 +9,7 @@ import CommonSelect from '../../../../core/common/commonSelect';
 import { promotion,academicYear,allClass,allSection } from '../../../../core/common/selectoption/selectoption';
 import PredefinedDateRanges from '../../../../core/common/datePicker';
 import TooltipOption from '../../../../core/common/tooltipOption';
+import DataTableStudentPrmotion from './DataTableStudentPrmotion';
 
 const StudentPromotion = () => {
     const [isPromotion, setIsPromotion] = useState<boolean>(false);
@@ -108,6 +109,7 @@ const StudentPromotion = () => {
         
         },
       ];
+      
   return (
     <>
     <div className="page-wrapper">
@@ -164,7 +166,7 @@ const StudentPromotion = () => {
                     </div>
                     <div>
                       <label className="form-label mb-2">
-                        Promotion from Class
+                        Promotion from 
                         <span className="text-danger"> *</span>
                       </label>
                       <div className="d-block d-md-flex">
@@ -186,8 +188,61 @@ const StudentPromotion = () => {
                         </div>
                       </div>
                     </div>
+                      
                   </div>
+  {/* Table of student data promotion from            */}
+<div className=" cardhead">
+  <div className="content1">
+    <div className="row">
+      <div className="col-12"> {/* changed from col-xl-6 to col-12 */}
+        <div className="card w-100">
+      
+          <div className="card-body" style={{ overflowX: 'auto' }}>
+            <div className="table-responsive">
+              <table className="table text-nowrap table-sm" style={{ width: '100%' }}>
+                <thead>
+                  <tr>
+                    <th scope="col">Student Name</th>
+                    <th scope="col">Admission Number</th>
+                
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { id: 'sm', name: 'Zelensky', date: '123456', status: 'Paid', statusClass: 'bg-soft-success' },
+                    { id: 'sm1', name: 'Kim Jong', date: '223232', status: 'Pending', statusClass: 'bg-soft-danger' },
+                    { id: 'sm2', name: 'Obana', date: '212522', status: 'Paid', statusClass: 'bg-soft-success' },
+                    { id: 'sm3', name: 'Sean Paul', date: '2656', status: 'Paid', statusClass: 'bg-soft-success' },
+                    { id: 'sm4', name: 'Karizma', date: '55485', status: 'Pending', statusClass: 'bg-soft-danger' },
+                
+                  ].map((item, index) => (
+                    <tr key={index}>
+                      <th scope="row">
+                        <div className="form-check">
+                          <input className="form-check-input" type="checkbox" id={`checkebox-${item.id}`} defaultChecked={index === 0} />
+                          <label className="form-check-label" htmlFor={`checkebox-${item.id}`}>
+                            {item.name}
+                          </label>
+                        </div>
+                      </th>
+                      <td>{item.date}</td>
+                    
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
                 </div>
+                
                 <Link
                   to="#"
                   className="badge bg-primary badge-xl exchange-link text-white d-flex align-items-center justify-content-center mx-md-4 mx-auto my-md-0 my-4 flex-shrink-0"
@@ -211,7 +266,7 @@ const StudentPromotion = () => {
                     </div>
                     <div>
                       <label className="form-label mb-2">
-                        Promotion from Class
+                        Promotion To
                         <span className="text-danger"> *</span>
                       </label>
                       <div className="d-block d-md-flex">
@@ -231,11 +286,64 @@ const StudentPromotion = () => {
                             defaultValue={allSection[0]}
                           />
                         </div>
+
                       </div>
+                        
                     </div>
                   </div>
+
+  {/* Table of student data promotion To            */}
+<div className=" cardhead">
+  <div className="content1">
+    <div className="row">
+      <div className="col-12"> {/* changed from col-xl-6 to col-12 */}
+        <div className="card w-100">
+      
+          <div className="card-body" style={{ overflowX: 'auto' }}>
+            <div className="table-responsive">
+              <table className="table text-nowrap table-sm" style={{ width: '100%' }}>
+                <thead>
+                  <tr>
+                    <th scope="col">Student Name</th>
+                    <th scope="col">Admission Number</th>
+                
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { id: 'sm', name: 'Zelensky', date: '123456', status: 'Paid', statusClass: 'bg-soft-success' },
+                    { id: 'sm1', name: 'Kim Jong', date: '223232', status: 'Pending', statusClass: 'bg-soft-danger' },
+                    { id: 'sm2', name: 'Obana', date: '212522', status: 'Paid', statusClass: 'bg-soft-success' },
+                    { id: 'sm3', name: 'Sean Paul', date: '2656', status: 'Paid', statusClass: 'bg-soft-success' },
+                    { id: 'sm4', name: 'Karizma', date: '55485', status: 'Pending', statusClass: 'bg-soft-danger' },
+                  ].map((item, index) => (
+                    <tr key={index}>
+                      <th scope="row">
+                        <div className="form-check">
+                          <input className="form-check-input" type="checkbox" id={`checkebox-${item.id}`} defaultChecked={index === 0} />
+                          <label className="form-check-label" htmlFor={`checkebox-${item.id}`}>
+                            {item.name}
+                          </label>
+                        </div>
+                      </th>
+                      <td>{item.date}</td>
+                    
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
                 </div>
+
               </div>
+          
               <div className="col-md-12">
                 <div className="manage-promote-btn d-flex justify-content-center flex-wrap row-gap-2">
                   <button
@@ -245,13 +353,13 @@ const StudentPromotion = () => {
                   >
                     Reset Promotion
                   </button>
-                  <button
+                  {/* <button
                     type="button"
                     className="btn btn-primary promote-students-btn"
                     onClick={()=>setIsPromotion(true)}
                   >
                     Manage Promotion
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </form>
@@ -260,12 +368,12 @@ const StudentPromotion = () => {
         <div className={`promote-card-main ${isPromotion && 'promote-card-main-show'}`}>
           <div className="card">
             <div className="card-header border-0 pb-0">
-              <div className="bg-light-gray p-3 rounded">
+              {/* <div className="bg-light-gray p-3 rounded">
                 <h4>Map Class Sections</h4>
                 <p>Select section mapping of old class to new class</p>
-              </div>
+              </div> */}
             </div>
-            <div className="card-body pb-2">
+            {/* <div className="card-body pb-2">
               <form >
                 <div className="d-flex align-items-center justify-content-between">
                   <div className="card w-100">
@@ -326,11 +434,53 @@ const StudentPromotion = () => {
                   </div>
                 </div>
               </form>
+            </div> */}
+                 {/* <div className="promoted-year text-center">
+            <p>
+              Selected Students will be prormoted to 2025 - 2026 Academic
+              Session
+            </p>
+            <Link
+              to="#"
+              className="btn btn-primary my-3"
+              data-bs-toggle="modal"
+              data-bs-target="#student_promote"
+            >
+              Promote Students
+            </Link>
+          </div> */}
+          <div className="toast-container success-msg-toast position-fixed">
+            <div
+              id="topright-Toast"
+              className="toast"
+              role="alert"
+              aria-live="assertive"
+              aria-atomic="true"
+            >
+              <div className="toast-header">
+                <p className="me-auto">
+                  <span>
+                    <i className="ti ti-square-check-filled text-success" />
+                  </span>
+                  Successfully Promoted
+                </p>
+                <Link
+                  to="#"
+                  className="toast-close"
+                  data-bs-dismiss="toast"
+                  aria-label="Close"
+                >
+                  <span>
+                    <i className="ti ti-x" />
+                  </span>
+                </Link>
+              </div>
             </div>
+          </div>
           </div>
           {/* Students List */}
           <div className="card">
-            <div className="card-header d-flex align-items-center justify-content-between flex-wrap pb-0">
+            {/* <div className="card-header d-flex align-items-center justify-content-between flex-wrap pb-0">
               <h4 className="mb-3">Students List</h4>
               <div className="d-flex align-items-center flex-wrap">
                 <div className="input-icon-start mb-3 me-2 position-relative">
@@ -382,61 +532,21 @@ const StudentPromotion = () => {
                   </ul>
                 </div>
               </div>
-            </div>
+            </div> */}
             <div className="card-body p-0 py-3">
               {/* Student List */}
-              <Table dataSource={data} columns={columns} Selection={true} />
+              {/* <Table dataSource={data} columns={columns} Selection={true} /> */}
               {/* /Student List */}
             </div>
           </div>
           {/* /Students List */}
-          <div className="promoted-year text-center">
-            <p>
-              Selected Students will be prormoted to 2025 - 2026 Academic
-              Session
-            </p>
-            <Link
-              to="#"
-              className="btn btn-primary"
-              data-bs-toggle="modal"
-              data-bs-target="#student_promote"
-            >
-              Promote Students
-            </Link>
-          </div>
-          <div className="toast-container success-msg-toast position-fixed">
-            <div
-              id="topright-Toast"
-              className="toast"
-              role="alert"
-              aria-live="assertive"
-              aria-atomic="true"
-            >
-              <div className="toast-header">
-                <p className="me-auto">
-                  <span>
-                    <i className="ti ti-square-check-filled text-success" />
-                  </span>
-                  Successfully Promoted
-                </p>
-                <Link
-                  to="#"
-                  className="toast-close"
-                  data-bs-dismiss="toast"
-                  aria-label="Close"
-                >
-                  <span>
-                    <i className="ti ti-x" />
-                  </span>
-                </Link>
-              </div>
-            </div>
-          </div>
+     
         </div>
       </div>
     </div>
   </div>
 </div>
+{/* Alert div */}
 <div className="modal fade" id="student_promote">
   <div className="modal-dialog modal-dialog-centered">
     <div className="modal-content">
