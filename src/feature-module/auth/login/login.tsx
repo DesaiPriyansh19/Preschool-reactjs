@@ -222,9 +222,17 @@ const Login = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="mt-5 text-center">
-                      <p className="mb-0 ">Copyright © {date()} - COYO KID</p>
-                    </div>
+                   <div className="mt-5 text-center">
+  <div className="d-inline-flex align-items-center gap-2">
+    <span>Powered by</span>
+    <img
+      src="assets/img/authentication/kidzy.png"
+      alt="Logo"
+      style={{ height: '20px' }}
+    />
+  </div>
+</div>
+
                   </div>
                 </form>
               </div>

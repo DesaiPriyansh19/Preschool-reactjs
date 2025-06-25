@@ -197,6 +197,12 @@ const AddStudent = () => {
                           <input type="text" className="form-control" defaultValue={isEdit? 'Ralph': undefined}/>
                         </div>
                       </div>
+                             <div className="col-xxl col-xl-3 col-md-6">
+                        <div className="mb-3">
+                          <label className="form-label">Middel Name</label>
+                          <input type="text" className="form-control" defaultValue={isEdit? 'claudia': undefined}/>
+                        </div>
+                      </div>
                       <div className="col-xxl col-xl-3 col-md-6">
                         <div className="mb-3">
                           <label className="form-label">Last Name</label>
@@ -322,7 +328,7 @@ const AddStudent = () => {
                       </div>
                       <div className="col-xxl col-xl-3 col-md-6">
                         <div className="mb-3">
-                          <label className="form-label">Mother Tongue</label>
+                          <label className="form-label">Suitable Batch</label>
                           <CommonSelect
                             className="select"
                             options={mothertongue}
@@ -391,18 +397,19 @@ const AddStudent = () => {
                             <input type="text" className="form-control" defaultValue={isEdit? 'Jerald Vicinius': undefined}/>
                           </div>
                         </div>
-                        <div className="col-lg-3 col-md-6">
-                          <div className="mb-3">
-                            <label className="form-label">Email</label>
-                            <input type="text" className="form-control" defaultValue={isEdit? 'jera@example.com': undefined}/>
-                          </div>
-                        </div>
-                        <div className="col-lg-3 col-md-6">
+                          <div className="col-lg-3 col-md-6">
                           <div className="mb-3">
                             <label className="form-label">Phone Number</label>
                             <input type="text" className="form-control" defaultValue={isEdit? '+1 45545 46464': undefined}/>
                           </div>
                         </div>
+                        <div className="col-lg-3 col-md-6">
+                          <div className="mb-3">
+                            <label className="form-label">Adhar Number</label>
+                            <input type="text" className="form-control" defaultValue={isEdit? 'jera@example.com': undefined}/>
+                          </div>
+                        </div>
+                      
                         <div className="col-lg-3 col-md-6">
                           <div className="mb-3">
                             <label className="form-label">
@@ -411,6 +418,25 @@ const AddStudent = () => {
                             <input type="text" className="form-control" defaultValue={isEdit? 'Mechanic': undefined}/>
                           </div>
                         </div>
+                          <div className="profile-upload">
+                              <div className="profile-uploader d-flex align-items-center">
+                                    <label className="form-label">ITR Scan Copy</label>
+                                <div className="drag-upload-btn mb-3">
+                                  Upload
+                                  <input
+                                    type="file"
+                                    className="form-control image-sign"
+                                    multiple
+                                  />
+                                </div>
+                                <Link to="#" className="btn btn-primary mb-3">
+                                  Remove
+                                </Link>
+                              </div>
+                              <p className="fs-12">
+                               most Recent ITR Shuld Be Ulploaded
+                              </p>
+                            </div>
                       </div>
                     </div>
                     <div className="border-bottom mb-3">
@@ -447,18 +473,19 @@ const AddStudent = () => {
                             <input type="text" className="form-control" defaultValue={isEdit? 'Roberta Webber': undefined}/>
                           </div>
                         </div>
-                        <div className="col-lg-3 col-md-6">
-                          <div className="mb-3">
-                            <label className="form-label">Email</label>
-                            <input type="text" className="form-control" defaultValue={isEdit? 'robe@example.com': undefined}/>
-                          </div>
-                        </div>
-                        <div className="col-lg-3 col-md-6">
+                           <div className="col-lg-3 col-md-6">
                           <div className="mb-3">
                             <label className="form-label">Phone Number</label>
                             <input type="text" className="form-control" defaultValue={isEdit? '+1 46499 24357': undefined}/>
                           </div>
                         </div>
+                        <div className="col-lg-3 col-md-6">
+                          <div className="mb-3">
+                            <label className="form-label">Adhar Number</label>
+                            <input type="text" className="form-control" defaultValue={isEdit? 'robe@example.com': undefined}/>
+                          </div>
+                        </div>
+                     
                         <div className="col-lg-3 col-md-6">
                           <div className="mb-3">
                             <label className="form-label">
@@ -467,12 +494,31 @@ const AddStudent = () => {
                             <input type="text" className="form-control" defaultValue={isEdit? 'Homemaker': undefined}/>
                           </div>
                         </div>
+                          <div className="profile-upload">
+                              <div className="profile-uploader d-flex align-items-center">
+                                    <label className="form-label">ITR Scan Copy</label>
+                                <div className="drag-upload-btn mb-3">
+                                  Upload
+                                  <input
+                                    type="file"
+                                    className="form-control image-sign"
+                                    multiple
+                                  />
+                                </div>
+                                <Link to="#" className="btn btn-primary mb-3">
+                                  Remove
+                                </Link>
+                              </div>
+                              <p className="fs-12">
+                               most Recent ITR Shuld Be Ulploaded
+                              </p>
+                            </div><br></br>
                       </div>
                     </div>
                     <div>
-                      <h5 className="mb-3">Guardian Details</h5>
+                      {/* <h5 className="mb-3">Guardian Details</h5> */}
                       <div className="row">
-                        <div className="col-md-12">
+                        {/* <div className="col-md-12">
                           <div className="mb-2">
                             <div className="d-flex align-items-center flex-wrap">
                               <label className="form-label text-dark fw-normal me-2">
@@ -546,33 +592,52 @@ const AddStudent = () => {
                               </p>
                             </div>
                           </div>
-                        </div>
-                        <div className="col-lg-3 col-md-6">
+                        </div> */}
+                        {/* <div className="col-lg-3 col-md-6">
                           <div className="mb-3">
                             <label className="form-label">Guardian Name</label>
                             <input type="text" className="form-control" defaultValue={isEdit? 'Jerald Vicinius': undefined}/>
                           </div>
-                        </div>
-                        <div className="col-lg-3 col-md-6">
+                        </div> */}
+                        {/* <div className="col-lg-3 col-md-6">
                           <div className="mb-3">
                             <label className="form-label">
                               Guardian Relation
                             </label>
                             <input type="text" className="form-control" defaultValue={isEdit? 'Uncle': undefined}/>
                           </div>
-                        </div>
-                        <div className="col-lg-3 col-md-6">
+                        </div> */}
+                        {/* <div className="col-lg-3 col-md-6">
                           <div className="mb-3">
                             <label className="form-label">Phone Number</label>
                             <input type="text" className="form-control" defaultValue={isEdit? '+1 45545 46464': undefined}/>
                           </div>
-                        </div>
-                        <div className="col-lg-3 col-md-6">
+                        </div> */}
+                        {/* <div className="col-lg-3 col-md-6">
                           <div className="mb-3">
-                            <label className="form-label">Email</label>
+                            <label className="form-label">Adhar Number</label>
                             <input type="email" className="form-control" defaultValue={isEdit? 'jera@example.com': undefined}/>
                           </div>
-                        </div>
+                        </div> */}
+                          {/* <div className="profile-upload">
+                              <div className="profile-uploader d-flex align-items-center">
+                                    <label className="form-label">Adhar Card Img</label>
+                                <div className="drag-upload-btn mb-3">
+                                  Upload
+                                  <input
+                                    type="file"
+                                    className="form-control image-sign"
+                                    multiple
+                                  />
+                                </div>
+                                <Link to="#" className="btn btn-primary mb-3">
+                                  Remove
+                                </Link>
+                              </div>
+                              <p className="fs-12">
+                           Upload image size 4MB, Format JPG, PNG, SVG
+                              </p>
+                            </div><br></br>
                         <div className="col-lg-3 col-md-6">
                           <div className="mb-3">
                             <label className="form-label">Occupation</label>
@@ -584,7 +649,7 @@ const AddStudent = () => {
                             <label className="form-label">Address</label>
                             <input type="text" className="form-control" defaultValue={isEdit? '3495 Red Hawk Road, Buffalo Lake, MN 55314': undefined}/>
                           </div>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                   </div>
