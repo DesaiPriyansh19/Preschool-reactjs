@@ -42,7 +42,7 @@ const AssignModal = ({addModal,setAddModal,editModal,setEditModal}:any) => {
         <div className="modal-body">
           {/* Table Filter */}
           <div className="table-filter-head">
-            <div className="filter-head-left">
+            {/* <div className="filter-head-left">
               <h5>Search Criteria</h5>
               <div className="dropdown mb-3 me-2">
                 <Link
@@ -126,13 +126,24 @@ const AssignModal = ({addModal,setAddModal,editModal,setEditModal}:any) => {
                   </form>
                 </div>
               </div>
-            </div>
+            </div> */}
             {/* /Table Filter */}
           </div>
           {/* /Filter Section */}
           <div className="modal-card-table">
-            <div className="modal-table-head">
-              <h4>List of Fees type</h4>
+              <div className="col-md-6">
+                          <div className="mb-3">
+                            <label className="form-label">Select Class</label>
+                            <CommonSelect
+                                className="select"
+                                options={allClass}
+                                defaultValue={allClass[0]}
+                              />
+                          </div>
+                        </div>
+            <div className="modal-table-head flex ">
+              <h4>Select Fees</h4>    
+             
             </div>
             <div className="table-responsive custom-table no-datatable_length">
               <table className="table datanew">
@@ -215,7 +226,7 @@ const AssignModal = ({addModal,setAddModal,editModal,setEditModal}:any) => {
               </table>
             </div>
           </div>
-          <div className="modal-card-table">
+          {/* <div className="modal-card-table">
             <div className="modal-table-head">
               <h4>Student Details</h4>
             </div>
@@ -493,13 +504,13 @@ const AssignModal = ({addModal,setAddModal,editModal,setEditModal}:any) => {
                 </tbody>
               </table>
             </div>
-          </div>
-          <div className="student-pomote-note d-flex mb-0">
+          </div> */}
+          {/* <div className="student-pomote-note d-flex mb-0">
             <span className="info-icon">
               <i className="ti ti-info-circle" />
             </span>
             <p> Selected 50 Fees Group, 350 Students</p>
-          </div>
+          </div> */}
         </div>
         <div className="modal-footer">
           <Link to="#" onClick={handleClose} className="btn btn-light me-2" data-bs-dismiss="modal">

@@ -319,7 +319,7 @@ export const SidebarData = [
 
         submenuItems: [
           { label: "Fees Group", link: routes.feesGroup },
-          { label: "Fees Type", link: routes.feesType },
+          // { label: "Fees Type", link: routes.feesType },
           { label: "Fees Master", link: routes.feesMaster },
           { label: "Fees Assign", link: routes.feesAssign },
           { label: "Fees Collection Report", link: routes.collectFees },
