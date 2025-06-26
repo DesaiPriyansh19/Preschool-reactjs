@@ -322,7 +322,7 @@ export const SidebarData = [
           { label: "Fees Type", link: routes.feesType },
           { label: "Fees Master", link: routes.feesMaster },
           { label: "Fees Assign", link: routes.feesAssign },
-          { label: "Collect Fees", link: routes.collectFees },
+          { label: "Fees Collection Report", link: routes.collectFees },
         ],
       },
       {

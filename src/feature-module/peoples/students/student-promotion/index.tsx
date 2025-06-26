@@ -152,7 +152,9 @@ const StudentPromotion = () => {
             </div>
           </div>
           <div className="card-body">
+            
             <form >
+
               <div className="d-md-flex align-items-center justify-content-between">
                 <div className="card flex-fill w-100">
                   <div className="card-body">
@@ -190,6 +192,7 @@ const StudentPromotion = () => {
                     </div>
                       
                   </div>
+
   {/* Table of student data promotion from            */}
 <div className=" cardhead">
   <div className="content1">
@@ -251,6 +254,7 @@ const StudentPromotion = () => {
                     <i className="ti ti-arrows-exchange fs-16" />
                   </span>
                 </Link>
+
                 <div className="card flex-fill w-100">
                   <div className="card-body">
                     <div className="mb-3">
@@ -362,9 +366,12 @@ const StudentPromotion = () => {
                   </button> */}
                 </div>
               </div>
+
             </form>
+
           </div>
         </div>
+
         <div className={`promote-card-main ${isPromotion && 'promote-card-main-show'}`}>
           <div className="card">
             <div className="card-header border-0 pb-0">
@@ -478,6 +485,7 @@ const StudentPromotion = () => {
             </div>
           </div>
           </div>
+
           {/* Students List */}
           <div className="card">
             {/* <div className="card-header d-flex align-items-center justify-content-between flex-wrap pb-0">
@@ -542,10 +550,12 @@ const StudentPromotion = () => {
           {/* /Students List */}
      
         </div>
+
       </div>
     </div>
   </div>
 </div>
+
 {/* Alert div */}
 <div className="modal fade" id="student_promote">
   <div className="modal-dialog modal-dialog-centered">
@@ -577,6 +587,7 @@ const StudentPromotion = () => {
     </div>
   </div>
 </div>
+
 </>
   )
 }

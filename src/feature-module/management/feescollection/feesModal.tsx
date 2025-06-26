@@ -49,6 +49,12 @@ const FeesModal = () => {
           <div className="modal-body" id="modal-datepicker2">
             <div className="row">
               <div className="col-md-12">
+                <div className="col-md-6">
+                    <div className="mb-3">
+                      <label className="form-label">Fees Title</label>
+                      <input type="text" className="form-control" />
+                    </div>
+                  </div>
                 <div className="mb-3">
                   <label className="form-label">Fees Group</label>
                   <CommonSelect
@@ -57,18 +63,19 @@ const FeesModal = () => {
                         defaultValue={undefined}
                         />
                 </div>
-                <div className="mb-3">
+                {/* Fees Type */}
+                {/* <div className="mb-3">
                   <label className="form-label">Fees Type</label>
                   <CommonSelect
                         className="select"
                         options={feesTypes}
                         defaultValue={undefined}
                         />
-                </div>
+                </div> */}
               </div>
               <div className="col-md-12">
                 <div className="row">
-                  <div className="col-md-6">
+                  {/* <div className="col-md-6">
                     <div className="mb-3">
                       <label className="form-label">Due Date</label>
                       <div className="date-pic">
@@ -87,32 +94,33 @@ const FeesModal = () => {
                         </span>
                       </div>
                     </div>
-                  </div>
-                  <div className="col-md-6">
+                  </div> */}
+                  {/* <div className="col-md-6">
                     <div className="mb-3">
                       <label className="form-label">Amount</label>
                       <input type="text" className="form-control" />
                     </div>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="mb-3">
                   <label className="form-label">Fine Type</label>
                   <div className="d-flex align-items-center check-radio-group">
-                    <label className="custom-radio">
+                    {/* <label className="custom-radio">
                       <input type="radio" name="radio" value="" checked={activeContent === ''}
                             onChange={handleContentChange} />
                       <span className="checkmark" />
                       None
-                    </label>
-                    <label className="custom-radio percentage-radio">
-                      <input type="radio" name="radio" value="percentage" onChange={handleContentChange} />
-                      <span className="checkmark" />
-                      Percentage
-                    </label>
+                    </label> */}
+                  
                     <label className="custom-radio fixed-radio">
                       <input type="radio" name="radio" value="fixed" onChange={handleContentChange} />
                       <span className="checkmark" />
                       Fixed
+                    </label>
+                      <label className="custom-radio percentage-radio">
+                      <input type="radio" name="radio" value="percentage" onChange={handleContentChange} />
+                      <span className="checkmark" />
+                      Percentage
                     </label>
                   </div>
                 </div>
