@@ -367,7 +367,7 @@ const AdminDashboard = () => {
                   </div>
                   <div className="mb-2">
                     <Link
-                      to={routes.collectFees}
+                      to={routes.feesCollectionReport}
                       className="btn btn-light d-flex align-items-center"
                     >
                       Fees Details

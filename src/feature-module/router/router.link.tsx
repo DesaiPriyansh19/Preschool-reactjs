@@ -160,7 +160,7 @@ import ResetPasswordSuccess3 from "../auth/resetPasswordSuccess/resetPasswordSuc
 import FeesTypes from "../management/feescollection/feesTypes";
 import FeesMaster from "../management/feescollection/feesMaster";
 import FeesAssign from "../management/feescollection/feesAssign";
-import CollectFees from "../management/feescollection/collectFees";
+import FeesCollectionReoprt from "../management/feescollection/feesCollectionReport";
 import StudentAttendance from "../hrm/attendance/student-attendance";
 import TeacherAttendance from "../hrm/attendance/teacher-attendance";
 import StaffAttendance from "../hrm/attendance/staff-attendance";
@@ -249,6 +249,8 @@ import NotificationActivities from "../pages/profile/activities";
 import Videocall from "../application/call/videoCall";
 import Inquiry from "../peoples/students/add-student/inquiry";
 import AcadmicFees from "../management/feescollection/acadmicFees";
+
+import CollectFees from "../management/feescollection/collectFees";
 
 
 const routes = all_routes;
@@ -1006,8 +1008,12 @@ export const publicRoutes = [
     element: <FeesAssign />,
   },
   {
+    path: routes.feesCollectionReport,
+    element: <FeesCollectionReoprt />,
+  },
+  {
     path: routes.collectFees,
-    element: <CollectFees />,
+    element: <CollectFees/>
   },
   {
     path: routes.libraryMembers,

@@ -321,6 +321,7 @@ export const SidebarData = [
         showSubRoute: false,
 
         submenuItems: [
+           { label: "Collect Fees", link: routes.collectFees },
           { label: "Fees Group", link: routes.feesGroup },
           // { label: "Fees Type", link: routes.feesType },
             {
@@ -334,7 +335,7 @@ export const SidebarData = [
           },
           // { label: "Other Charges", link: routes.feesMaster },
           { label: "Fees Assign", link: routes.feesAssign },
-          { label: "Fees Collection Report", link: routes.collectFees },
+          { label: "Fees Collection Report", link: routes.feesCollectionReport },
         ],
       },
       {
