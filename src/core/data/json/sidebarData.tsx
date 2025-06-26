@@ -228,17 +228,26 @@ export const SidebarData = [
         showSubRoute: false,
 
         submenuItems: [
-          { label: "All Classes", link: routes.classes },
-          { label: "Schedule", link: routes.sheduleClasses },
-        ],
+          
+          { label: "Classes", link: routes.classes },
+             {
+        label: "Section",
+        link: routes.classSection,
+        icon: "ti ti-square-rotated-forbid-2",
+        showSubRoute: false,
+        submenu: false,
       },
-      {
+        {
         label: "Class Room",
         link: routes.classRoom,
         icon: "ti ti-building",
         showSubRoute: false,
         submenu: false,
       },
+          // { label: "Schedule", link: routes.sheduleClasses },
+        ],
+      },
+    
       {
         label: "Class Routine",
         link: routes.classRoutine,
@@ -246,13 +255,7 @@ export const SidebarData = [
         showSubRoute: false,
         submenu: false,
       },
-      {
-        label: "Section",
-        link: routes.classSection,
-        icon: "ti ti-square-rotated-forbid-2",
-        showSubRoute: false,
-        submenu: false,
-      },
+   
       {
         label: "Subject",
         link: routes.classSubject,

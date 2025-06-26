@@ -42,7 +42,7 @@ const ClassRoom = () => {
         a.capacity.length - b.capacity.length,
     },
     {
-      title: "Status",
+      title: "Class-Section",
       dataIndex: "status",
       render: () => (
         <>

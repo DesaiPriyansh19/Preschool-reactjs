@@ -55,30 +55,30 @@ const Classes = () => {
         a.noOfStudents.length - b.noOfStudents.length,
     },
     {
-      title: "No of Subjects",
+      title: "Class Room",
       dataIndex: "noOfSubjects",
       sorter: (a: TableData, b: TableData) =>
         a.noOfSubjects.length - b.noOfSubjects.length,
     },
-    {
-      title: "Status",
-      dataIndex: "status",
-      render: (text: string) => (
-        <>
-          {text === "Active" ? (
-            <span className="badge badge-soft-success d-inline-flex align-items-center">
-              <i className="ti ti-circle-filled fs-5 me-1"></i>
-              {text}
-            </span>
-          ) : (
-            <span className="badge badge-soft-danger d-inline-flex align-items-center">
-              <i className="ti ti-circle-filled fs-5 me-1"></i>
-              {text}
-            </span>
-          )}
-        </>
-      ),
-    },
+    // {
+    //   title: "Status",
+    //   dataIndex: "status",
+    //   render: (text: string) => (
+    //     <>
+    //       {text === "Active" ? (
+    //         <span className="badge badge-soft-success d-inline-flex align-items-center">
+    //           <i className="ti ti-circle-filled fs-5 me-1"></i>
+    //           {text}
+    //         </span>
+    //       ) : (
+    //         <span className="badge badge-soft-danger d-inline-flex align-items-center">
+    //           <i className="ti ti-circle-filled fs-5 me-1"></i>
+    //           {text}
+    //         </span>
+    //       )}
+    //     </>
+    //   ),
+    // },
     {
       title: "Action",
       dataIndex: "action",
@@ -311,7 +311,15 @@ const Classes = () => {
                           defaultValue={classSection[0]}
                         />
                       </div>
-                      <div className="mb-3">
+                        <div className="mb-3">
+                        <label className="form-label">Class Room</label>
+                        <CommonSelect
+                          className="select"
+                          options={classSection}
+                          defaultValue={classSection[0]}
+                        />
+                      </div>
+                      {/* <div className="mb-3">
                         <label className="form-label">No of Students</label>
                         <input type="text" className="form-control" />
                       </div>
@@ -332,7 +340,7 @@ const Classes = () => {
                             id="switch-sm"
                           />
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>
