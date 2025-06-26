@@ -666,7 +666,8 @@ const BasicTable = () => {
             </div>
           </div>
         </div>
-      </div><div className="col-xl-6">
+      </div>
+      <div className="col-xl-6">
         <div className="card">
           <div className="card-header justify-content-between">
             <div className="card-title">

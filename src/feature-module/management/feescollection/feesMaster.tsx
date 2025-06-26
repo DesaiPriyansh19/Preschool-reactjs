@@ -164,7 +164,7 @@ const FeesMaster = () => {
                     <Link to="#">Fees Collection</Link>
                   </li>
                   <li className="breadcrumb-item active" aria-current="page">
-                    Fees Master
+                   Other Charges
                   </li>
                 </ol>
               </nav>

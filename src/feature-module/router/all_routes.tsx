@@ -226,6 +226,8 @@ export const all_routes = {
   feesGroup:"/management/fees-group",
   feesType:"/management/fees-type",
   feesMaster:"/management/fees-master",
+  acadmicFees:"/management/acadmic-fees",
+  otherCharges:"/management/other-charges",
   feesAssign:"/management/fees-assign",
   collectFees:"/management/collect-fees",
   libraryMembers:"/management/library-members",

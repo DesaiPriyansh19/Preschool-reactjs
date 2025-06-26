@@ -248,6 +248,7 @@ import EmailVerification3 from "../auth/emailVerification/emailVerification-3";
 import NotificationActivities from "../pages/profile/activities";
 import Videocall from "../application/call/videoCall";
 import Inquiry from "../peoples/students/add-student/inquiry";
+import AcadmicFees from "../management/feescollection/acadmicFees";
 
 
 const routes = all_routes;
@@ -992,9 +993,14 @@ export const publicRoutes = [
     element: <FeesTypes />,
   },
   {
-    path: routes.feesMaster,
+    path:   routes.otherCharges,
     element: <FeesMaster />,
   },
+    {
+    path:   routes.acadmicFees,
+    element: <AcadmicFees/>,
+  },
+
   {
     path: routes.feesAssign,
     element: <FeesAssign />,

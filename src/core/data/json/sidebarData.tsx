@@ -312,7 +312,7 @@ export const SidebarData = [
     showSubRoute: false,
     submenuItems: [
       {
-        label: "Fees Collection",
+        label: "Fees & Collection",
         icon: "ti ti-report-money",
         submenu: true,
         showSubRoute: false,
@@ -320,7 +320,16 @@ export const SidebarData = [
         submenuItems: [
           { label: "Fees Group", link: routes.feesGroup },
           // { label: "Fees Type", link: routes.feesType },
-          { label: "Fees Master", link: routes.feesMaster },
+            {
+            label: "Fees Master",
+            submenu: true,
+            showSubRoute: false,
+            submenuItems: [
+              { label: "Acadmic Fees", link: routes.acadmicFees, showSubRoute: false },
+                        { label: "Other Charges", link: routes.otherCharges , showSubRoute: false },
+            ],
+          },
+          // { label: "Other Charges", link: routes.feesMaster },
           { label: "Fees Assign", link: routes.feesAssign },
           { label: "Fees Collection Report", link: routes.collectFees },
         ],
